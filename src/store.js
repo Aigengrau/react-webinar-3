@@ -43,7 +43,7 @@ class Store {
    * Добавление новой записи
    */
   addItem() {
-    const newItem = { code: this.codeCounter, title: 'Новая запись' };
+    const newItem = { code: this.codeCounter, title: 'Новая запись', allocated: 0} };
     this.setState({
       ...this.state,
       list: [...this.state.list, newItem]
@@ -75,10 +75,12 @@ class Store {
 
         if (item.code === code || item.selected) {
           item.selected = !item.selected;
-          if (item.selected) {
-            item.clickCount = (item.clickCount || 0) + 1;
+          if (!item.selected) {
+            item.allocated++
           }
+          item.selected = !item.selected;
         }
+        else item.selected = false
         return item;
       })
 
