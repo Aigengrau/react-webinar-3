@@ -44,9 +44,7 @@ body {
   background: #75aaf1;
   color: #fff;
 }
-.Item_selected .Item-title-count{
-  color: #ffff44;
-}
+
 .Item-code {
   padding: 20px 10px 20px 20px;
 }
@@ -55,10 +53,7 @@ body {
   width: 100%;
   padding: 20px 10px;
 }
-.Item-title-count{
-  font-size: 12px;
-  color: #808080;
-}
+
 .Item-actions {
   display: flex;
   justify-content: flex-end;
